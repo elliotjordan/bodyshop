@@ -5,6 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BodyShop Home</title>
+       <style>
+        body {
+            margin: 0; /* Remove default body margins */
+        }
+
+        .banner-container {
+            width: 100%;
+            overflow: hidden; /* Prevents image overflow */
+        }
+
+        .banner-image {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Prevents a small space below the image */
+            object-fit: cover; /* Cover the entire container, may crop image */
+            object-position: center; /* Center the image within the container */
+        }
+
+        /* Optional: Add some styling for smaller screens if object-fit: cover; isn't ideal */
+        @media (max-width: 768px) { /* Adjust breakpoint as needed */
+            .banner-image {
+                object-fit: contain; /* Contain the image, may add letterboxing */
+            }
+        }
+
+        /* Optional: Add a caption */
+        .banner-caption {
+            position: absolute;
+            bottom: 20px; /* Adjust position as needed */
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 2em; /* Adjust size as needed */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 10px 0; /* Add padding */
+        }
+    </style>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
